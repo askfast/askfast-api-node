@@ -1,0 +1,20 @@
+{
+  "name": "askfast",
+  "version": "0.1.0",
+  "description": "Library to create AskFast agents",
+  "main": "askfast.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/askfast/askfast-api-node.git"
+  },
+  "keywords": [
+    "askfast",
+    "ivr",
+    "sms"
+  ],
+  "author": "Sven Stam",
+  "license": "BSD"
+}
