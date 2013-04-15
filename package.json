@@ -2,7 +2,7 @@
   "name": "askfast",
   "version": "0.1.0",
   "description": "Library to create AskFast agents",
-  "main": "askfast.js",
+  "main": "lib/askfast.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
