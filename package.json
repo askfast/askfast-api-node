@@ -1,6 +1,6 @@
 {
   "name": "askfast",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Library to create AskFast agents",
   "main": "lib/askfast.js",
   "scripts": {
@@ -16,5 +16,8 @@
     "sms"
   ],
   "author": "Sven Stam",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "string": "~1.5.1"
+  }
 }
