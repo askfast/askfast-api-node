@@ -3,11 +3,11 @@ var AskFast = require('askfast');
 
 var server = http.createServer(function (request, response) {
 
-	// Create a new instance of the TropoWebAPI object.
+	// Create a new instance of the object.
 	var askfast = new AskFast();
 	askfast.say("Hello, World!");
 
-	// Render out the JSON for Tropo to consume.
+	// Render out the JSON for consume.
 	response.writeHead(200, {'Content-Type': 'application/json'});
 	response.end(askfast.finalize());
 
