@@ -1,6 +1,6 @@
 var http = require('http'),
     url = require('url'),
-    AskFast = require('askfast');
+    AskFast = require('../');
 
 var server = http.createServer(function (request, response) {
 

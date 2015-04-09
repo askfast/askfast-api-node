@@ -2,7 +2,7 @@
   "name": "askfast",
   "version": "0.2.2",
   "description": "Library to create AskFast agents",
-  "main": "lib/askfast.js",
+  "main": "lib/askfast/askfast.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +18,9 @@
   "author": "Sven Stam",
   "license": "BSD",
   "dependencies": {
-    "string": "~1.5.1"
+    "bluebird": "^2.9.24",
+    "promise": "^7.0.0",
+    "string": "~1.5.1",
+    "unirest": "^0.4.0"
   }
 }
