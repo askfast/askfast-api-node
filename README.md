@@ -9,17 +9,15 @@ Send Email, sms and start calls right form your node.js app, with the simple ASK
         
 2. install package
 
-        npm install 
+        npm install askfast
 
 3. Send sms message
 
-        var askfast = new AskFast()
-        askfast.sendSMSMessage({
-            to: '0031612345678',
-            from: 'ASK Fast',
-            body: 'This is a test message from ASK Fast
-        }).then(function(result){
-            console.log
+        var RestClient = require('askfast').RestClient;
+
+        var askfast = new RestClient()
+        askfast.sendSMSMessage('+31612345678', 'text://This is a test message from ASK Fast'}).then(function(result){
+            console.log(result)
         })
 
 To send email use: 
@@ -28,24 +26,24 @@ To send email use:
 
 To start a call use:
 
-        askfast.startCALL()
+        askfast.startCall('+31612345678', 'http://api.ask-fast.com/question/comment?message=This is a test message from ASK Fast')
 
 ## Create dialog
 
-ASK Fast provides you the posibilty to create more complex dialogs with two way functionality. Below shows an example for a two way dialog which can be used with `sendSMSMessage` , `sendEMAILMessage` and `startCALL` functions.
+ASK Fast provides you the posibility to create more complex dialogs with two way functionality. Below shows an example for a two way dialog which can be used with `sendSMSMessage` , `sendEMAILMessage` and `startCALL` functions.
 
 The basic principle is very easy:
     
-1. Create a publicy accesable server
+1. Create a publicly accessible server
 2. Create a dialog
 3. Initiate the dialog
 
 
-    var Askfast = require('askfast')
+    var Dialog = require('askfast').Dialog;
     var server = http.createServer(function (request, response) {
     
         // Create a new instance of the object.
-        var dialog = new AskFast()  ;
+        var dialog = new Dialog()  ;
         dialog.say("Hello, World!");
         
         // Render out the JSON for consume.
@@ -53,19 +51,3 @@ The basic principle is very easy:
         response.end(dialog.finalize());
 
     }).listen(8000);
-        
-## initiate custom dialog via HTTP
-
-        send http request (does not have to be node)
-        var http = require(http)
-        var options = {
-            host : 'http://api.ask-fast.com',
-            path : '/dialog',
-            method : 'POST'
-        }
-        var dialog = {
-            
-        }
-        req = http(options,dialog,function(err,data){
-        
-        })

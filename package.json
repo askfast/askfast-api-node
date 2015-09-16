@@ -1,8 +1,8 @@
 {
   "name": "askfast",
-  "version": "0.2.2",
-  "description": "Library to create AskFast agents",
-  "main": "lib/askfast/askfast.js",
+  "version": "0.3.0",
+  "description": "Send Email, sms and start calls right form your node.js app, with the simple ASK Fast API",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,14 +13,23 @@
   "keywords": [
     "askfast",
     "ivr",
-    "sms"
+    "sms",
+    "email",
+    "call",
+    "communication"
   ],
   "author": "Sven Stam",
   "license": "BSD",
   "dependencies": {
     "bluebird": "^2.9.24",
     "promise": "^7.0.0",
+    "querystring": "^0.2.0",
+    "request": "^2.55.0",
     "string": "~1.5.1",
-    "unirest": "^0.4.0"
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4"
   }
 }

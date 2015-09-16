@@ -1,6 +1,6 @@
 var http = require('http'),
     url = require('url'),
-    AskFast = require('../');
+    AskFast = require('../lib/').Dialog;
 
 var server = http.createServer(function (request, response) {
 
