@@ -3,6 +3,10 @@ ASK Fast node API
 
 Send Email, sms and start calls right form your node.js app, with the simple ASK Fast API
 
+## Status:
+
+[![npm version][npm-image]][npm-url]
+
 ## how to use:
 
 1. Create free ASK Fast account at portal.ask-fast.com
@@ -51,3 +55,6 @@ The basic principle is very easy:
         response.end(dialog.finalize());
 
     }).listen(8000);
+
+[npm-image]: https://img.shields.io/npm/v/askfast.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/askfast
